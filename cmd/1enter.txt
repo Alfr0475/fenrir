@@ -1,0 +1,19 @@
+;[.extension;
+;MenuText|CommandLine|WorkingDirectory|nShow
+;]
+
+[.\\\;
+選択したフォルダをスキャンする| C:\Apps\fenrir\fenrirScan.exe *%P,*.*,\
+選択したフォルダのサブフォルダをスキャンしない | C:\WINDOWS\system32\cmd.exe /c echo *%P>>C:\Apps\fenrir\ScanRule.ini
+選択したフォルダのパスをScanRule.iniにスキャンするパスとして追加する | C:\WINDOWS\system32\cmd.exe /c echo +%P>>C:\Apps\fenrir\ScanRule.ini
+選択したフォルダのパスをScanRule.iniにスキャンしないパスとして追加する | C:\WINDOWS\system32\cmd.exe /c echo -%P>>C:\Apps\fenrir\ScanRule.ini
+選択したフォルダをpathに追加する | C:\WINDOWS\system32\cmd.exe /c echo %P>>C:\Apps\fenrir\data\path
+選択したフォルダをpathより削除する | C:\Apps\fenrir\fenrirScan.exe !%P
+]
+
+[.???;
+選択したフォルダのパスをScanrule.iniにスキャンするパスとして追加する | C:\WINDOWS\system32\cmd.exe /c echo +%P>>C:\Apps\fenrir\ScanRule.ini
+選択したフォルダのパスをScanrule.iniにスキャンしないパスとして追加する | C:\WINDOWS\system32\cmd.exe /c echo -%P>>C:\Apps\fenrir\ScanRule.ini
+選択したファイルをpathに追加する | C:\WINDOWS\system32\cmd.exe /c echo %P>>C:\Apps\fenrir\data\path
+選択したファイルをpathより削除する | C:\Apps\fenrir\fenrirScan.exe !%P
+]

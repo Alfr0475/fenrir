@@ -1,0 +1,45 @@
+;[.extension;
+;MenuText|CommandLine|WorkingDirectory|nShow
+;]
+
+
+; フォルダの設定
+[.\\\;
+XF-Finderで開く | C:\Apps\X-Finder\XF.exe | "%P"
+------------------------------------------------
+Emacs Clientで開く | C:\Apps\Emacs\bin\emacsclientw.exe "%P"
+Emacs Serverで開く | C:\Apps\Emacs\bin\runemacs.exe "%P"
+------------------------------------------------
+コマンドプロンプト | C:\WINDOWS\SysWow64\cmd.exe "%P"
+------------------------------------------------
+このフォルダをスキャン | C:\Apps\fenrir\fenrirScan.exe *%P,*.*,\
+]
+
+; 実行ファイル系
+[.exe;.lnk;
+実行  | "%P"
+]
+
+; その他の拡張子設定
+[.???
+サクラエディタで開く | "C:\Program Files (x86)\sakura\sakura.exe" "%P"
+-------------------------------------------------
+Emacs Clientで開く | C:\Apps\Emacs\bin\emacsclient.exe "%P"
+Emacs Serverで開く | C:\Apps\Emacs\bin\runemacs.exe "%P"
+]
+
+
+[.***;
+-------------------------------------------------
+Stirlingで開く | C:\Apps\Stirling\Stirling.exe "%P"
+-------------------------------------------------
+ポチエス | C:\Apps\ポチエス\esExt\esExt5.exe "%P"
+-------------------------------------------------
+このパスを削除 | C:\Apps\fenrir\fenrirScan.exe !%P
+-------------------------------------------------
+フルパスをコピー | C:\Apps\getPath\getPath.exe /link "%P"
+ショートパスをコピー | C:\Apps\getPath\getPath.exe /short "%P"
+-------------------------------------------------
+コンテキストメニュー | C:\Apps\Contextmenu\ContextMenu.exe "%P"
+プロパティ | C:\Apps\FileProperty\FileProperty.exe "%P"
+]
